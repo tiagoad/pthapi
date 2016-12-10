@@ -42,7 +42,7 @@ class PTHAPI:
 
 		r = self.session.get(url)
 
-		return r.text
+		return json.loads(r.text)
 
 	def index(self):
 		response = self._request("index", arguments=None)
